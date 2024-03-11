@@ -17,7 +17,6 @@ services:
   caddy:
     image: caddy:latest
     restart: unless-stopped
-    user: root
     ports:
       - "80:80"
       - "443:443"
