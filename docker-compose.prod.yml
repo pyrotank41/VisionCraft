@@ -8,27 +8,8 @@ services:
       - "3000:3000"
     environment:
       - NODE_ENV=production
-    
     env_file:
       - .env.local
-  
-  caddy:
-    image: caddy:latest
-    restart: unless-stopped
-    ports:
-      - "80:80"
-      - "443:443"
-    volumes:
-      - ./caddy_data:/data
-      - ./caddy_config:/config
-      - ./caddy_config/Caddyfile:/etc/caddy/Caddyfile
-    
-    environment:
-      - CADDY_DOMAIN=${DOMAIN}
-    
-    env_file:
-      - .env.local
-    
 
 networks:
   default:

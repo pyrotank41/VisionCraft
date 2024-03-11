@@ -1,5 +1,0 @@
-visioncraft.pragmaticai.dev {
-  reverse_proxy app:3000 {
-    flush_interval -1
-  }
-}
