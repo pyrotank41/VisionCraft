@@ -33,7 +33,7 @@ COPY --from=builder /app/package.json ./package.json
 EXPOSE 3000
 
 # Set the command to run your app using CMD which defines your runtime
-CMD ["npm", "start", "-p", "3030"]
+CMD ["npm", "start"]
 
 # Stage 3: Setup for development with hot reloading
 # This stage is used for development purposes only
