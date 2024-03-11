@@ -1,5 +1,5 @@
-{$CADDY_DOMAIN} {
-  reverse_proxy app:3000 {
+visioncraft.pragmaticai.dev {
+  reverse_proxy app:3030 {
     flush_interval -1
   }
 }
