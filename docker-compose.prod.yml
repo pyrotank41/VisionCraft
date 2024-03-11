@@ -13,4 +13,5 @@ services:
 
 networks:
   default:
-    name: caddy_net
+    name: mynetwork
+    external: true
