@@ -8,6 +8,8 @@ on:
 jobs:
   deploy:
     runs-on: self-hosted
+    env:
+        CADDY_DOMAIN: ${{ secrets.CADDY_DOMAIN }}
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
