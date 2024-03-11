@@ -8,11 +8,14 @@ on:
 jobs:
   deploy:
     runs-on: self-hosted
-    env:
-        CADDY_DOMAIN: ${{ secrets.CADDY_DOMAIN }}
+    
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
+
+    - name: Setup .env.local
+      run: |
+        echo CADDY_DOMAIN=${{ secrets.CADDY_DOMAIN }} > .env.local
 
     - name: Build and Deploy
       run: |
